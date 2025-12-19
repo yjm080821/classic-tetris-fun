@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        arcade: ["'Press Start 2P'", "monospace"],
+        tech: ["'Orbitron'", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,15 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        tetro: {
+          i: "hsl(var(--tetro-i))",
+          o: "hsl(var(--tetro-o))",
+          t: "hsl(var(--tetro-t))",
+          s: "hsl(var(--tetro-s))",
+          z: "hsl(var(--tetro-z))",
+          j: "hsl(var(--tetro-j))",
+          l: "hsl(var(--tetro-l))",
         },
       },
       borderRadius: {
@@ -65,25 +68,23 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "line-clear": {
+          "0%": { opacity: "1", transform: "scaleY(1)" },
+          "50%": { opacity: "0.5", transform: "scaleY(1.2)" },
+          "100%": { opacity: "0", transform: "scaleY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "line-clear": "line-clear 0.3s ease-out",
       },
     },
   },
